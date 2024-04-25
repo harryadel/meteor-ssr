@@ -14,7 +14,6 @@ Package.onTest(function(api) {
   configurePackage(api);
   api.use([
     'tinytest',
-    'mquandalle:jade-compiler@0.4.4'
   ], 'server');
 
   api.addFiles([
@@ -25,8 +24,7 @@ Package.onTest(function(api) {
 
 function configurePackage(api) {
   api.versionsFrom(['3.0-rc.0']);
-  api.use('mquandalle:jade-compiler@0.4.4', { weak: true });
-  api.use(['blaze', 'spacebars', 'spacebars-compiler', 'mongo', 'random'], 'server');
+  api.use(['blaze@3.0.0-alpha300.17', 'spacebars@2.0.0-alpha300.17', 'spacebars-compiler@2.0.0-alpha300.17', 'mongo', 'random'], 'server');
   api.addFiles([
     'lib/overrides.js',
     'lib/template.js',
